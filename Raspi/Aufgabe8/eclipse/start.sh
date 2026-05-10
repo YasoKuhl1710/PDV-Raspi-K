@@ -1,0 +1,1 @@
+java -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Djava.awt.headless -jar plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -consoleLog -console -clean

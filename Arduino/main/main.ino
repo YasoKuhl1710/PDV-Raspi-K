@@ -29,7 +29,7 @@ String topic2 = "";
 const char *ssid ="ITBahn123";
 const char *password ="ITBahn12345";
 
-const char *broker ="141.72.191.235";
+const char *broker ="141.72.12.245";
 const int port = 1883;
 
 // leer lassen fuer kein username und kein password (STTS Labor)
@@ -164,8 +164,7 @@ void loop() {
     r1 = write_byte_array(rfid1.uid.uidByte, rfid1.uid.size);
     Serial.print(F("Card UID 1:"));
     Serial.println(r1);
-    topic1 = "ESP32_[K]/RFID[1]/";
-    topic1 += r1;
+    topic1 = "ESP32_[K]/RFID[1]/ID";
     client.publish(topic1.c_str(), r1.c_str());
     rfid1.PICC_HaltA();
     rfid1.PCD_StopCrypto1();
@@ -175,8 +174,7 @@ void loop() {
     r2 = write_byte_array(rfid2.uid.uidByte, rfid2.uid.size);
     Serial.print(F("Card UID 2:"));
     Serial.println(r2);
-    topic2 = "ESP32_[K]/RFID[2]/";
-    topic2 += r2;
+    topic2 = "ESP32_[K]/RFID[2]/ID";
     client.publish(topic2.c_str(), r2.c_str());
     rfid2.PICC_HaltA();
     rfid2.PCD_StopCrypto1();
