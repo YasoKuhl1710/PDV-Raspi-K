@@ -2,7 +2,7 @@
 <feature
       id="de.dhbw.pdv.rfid.feature"
       label="Feature"
-      version="1.0.0.202605120841">
+      version="1.0.0.202605121048">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -18,7 +18,7 @@
 
    <plugin
          id="de.dhbw.pdv.k.rfid.cli"
-         version="1.0.0.202605120841"/>
+         version="1.0.0.202605121048"/>
 
    <plugin
          id="org.apache.felix.gogo.command"
