@@ -144,7 +144,7 @@ void setup() {
     brok ++;
     if (brok == 10) connection_loss();
   }
-  client.publish("ESP32_[K]/Online", "Online");
+  client.publish("ESP32_[K]/Online", "Online",true);
   digitalWrite(LED2_2,HIGH);
   digitalWrite(LED3_2,HIGH);
   digitalWrite(LED2_1,LOW);
